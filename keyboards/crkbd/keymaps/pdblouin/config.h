@@ -22,22 +22,33 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 //#define USE_MATRIX_I2C
 
-//#define QUICK_TAP_TERM 0
+#define SPLIT_LAYER_STATE_ENABLE
+
+#define QUICK_TAP_TERM 0
 //#define TAPPING_TERM 100
 
-#ifdef RGBLIGHT_ENABLE
-    #define RGBLIGHT_EFFECT_BREATHING
-    #define RGBLIGHT_EFFECT_RAINBOW_MOOD
-    #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-    #define RGBLIGHT_EFFECT_SNAKE
-    #define RGBLIGHT_EFFECT_KNIGHT
-    #define RGBLIGHT_EFFECT_CHRISTMAS
-    #define RGBLIGHT_EFFECT_STATIC_GRADIENT
-    #define RGBLIGHT_EFFECT_RGB_TEST
-    #define RGBLIGHT_EFFECT_ALTERNATING
-    #define RGBLIGHT_EFFECT_TWINKLE
-    #define RGBLIGHT_LIMIT_VAL 120
-    #define RGBLIGHT_HUE_STEP 10
-    #define RGBLIGHT_SAT_STEP 17
-    #define RGBLIGHT_VAL_STEP 17
-#endif
+#define TAPPING_TERM 250
+#define PERMISSIVE_HOLD  // Triggers mod if you tap another key while holding.
+#define CHORDAL_HOLD     // Constrains holds to opposite-hand combinations.
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+// #define FLOW_TAP_TERM 150 // Disables holds when typing quickly.
+
+// ── Constants ────────────────────────────────────────
+#define _BASE 0
+#define _NUM  1
+#define _SYM  2
+#define _RGB  3
+
+
+
+/*
+const key_override_t open_paren_override  = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
+const key_override_t close_paren_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
+
+// This globally defines all key overrides to be used
+const key_override_t *key_overrides[] = {
+    &open_paren_override,
+    &close_paren_override
+};
+
+*/
