@@ -40,15 +40,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define _RGB  3
 
 
-
-/*
-const key_override_t open_paren_override  = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
-const key_override_t close_paren_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
-
-// This globally defines all key overrides to be used
-const key_override_t *key_overrides[] = {
-    &open_paren_override,
-    &close_paren_override
-};
-
-*/
